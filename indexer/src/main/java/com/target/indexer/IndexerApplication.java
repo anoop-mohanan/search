@@ -58,10 +58,13 @@ public class IndexerApplication {
         ConfigurableApplicationContext context = springApplication.run(IndexerApplication.class, args);
 
 
-        if (staticIndexService.isIndexExists(staticIndexName)) {
-            staticIndexService.deleteIndex(staticIndexName);
+        try {
+            if (staticIndexService.isIndexExists(staticIndexName)) {
+                staticIndexService.deleteIndex(staticIndexName);
+            }
+        } catch (RestClientException rcEx) {
+            LOGGER.error("Exception occurred while checking index : {}, exception : {}", staticIndexName, rcEx);
         }
-
         staticIndexService.createIndex(staticIndexName, staticSettings);
 
         staticIndexService.index(staticDataDir, staticIndexName);
