@@ -67,7 +67,7 @@ public class SearchServiceImpl implements SearchService {
                 path -> {
                     try {
                         String content = Files.readString(path);
-                        String[] words = content.replaceAll("[^a-zA-Z \\n]", "").toLowerCase().split("\\s+");
+                        String[] words = content.replaceAll("[^a-zA-Z0-9 \\n]", "").toLowerCase().split("\\s+");
                         int count = 0;
                         for (String word : words) {
                             if (searchTerm.equals(word)) {
@@ -92,8 +92,8 @@ public class SearchServiceImpl implements SearchService {
             path -> {
                 try {
                     String content = Files.readString(path);
-                    String[] words = content.replaceAll("[^a-zA-Z \\n]", "").toLowerCase().split("\\s+");
-                    Pattern pattern = Pattern.compile(searchTerm);
+                    content = content.replaceAll("[^a-zA-Z0-9 \\n]", "").toLowerCase();
+                    Pattern pattern = Pattern.compile("\\b("+searchTerm+")\\b");
                     int count = 0;
                     Matcher matcher = pattern.matcher(content);
                     while (matcher.find())
