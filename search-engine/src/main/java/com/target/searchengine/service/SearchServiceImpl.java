@@ -141,7 +141,7 @@ public class SearchServiceImpl implements SearchService {
     };
 
 
-    public static void main(String [] args) throws Exception {
+    /*public static void main(String [] args) throws Exception {
         String str = "{\"took\":20,\"timed_out\":false,\"_shards\":{\"total\":1,\"successful\":1,\"skipped\":0,\"failed\":0},\"hits\":{\"total\":{\"value\":99,\"relation\":\"eq\"},\"max_score\":2.441254,\"hits\":[{\"_index\":\"search_terms\",\"_type\":\"_doc\",\"_id\":\"020ca79b-8445-4b85-bc04-e2c6c339845c\",\"_score\":2.441254,\"_source\":{\"term\":\"the\",\"filename\":\"french_armed_forces.txt\"}},{\"_index\":\"search_terms\",\"_type\":\"_doc\",\"_id\":\"0f10bd07-4f63-4b99-ad64-e2051be4f725\",\"_score\":2.441254,\"_source\":{\"term\":\"the\",\"filename\":\"french_armed_forces.txt\"}},{\"_index\":\"search_terms\",\"_type\":\"_doc\",\"_id\":\"60b17957-c716-457e-8bcb-5a4f795b85f0\",\"_score\":2.441254,\"_source\":{\"term\":\"the\",\"filename\":\"french_armed_forces.txt\"}},{\"_index\":\"search_terms\",\"_type\":\"_doc\",\"_id\":\"2a1f2977-1743-4b65-bf87-a216ccb5e22d\",\"_score\":2.441254,\"_source\":{\"term\":\"the\",\"filename\":\"french_armed_forces.txt\"}},{\"_index\":\"search_terms\",\"_type\":\"_doc\",\"_id\":\"4e75fa21-eab2-456a-8bb1-254524f3b571\",\"_score\":2.441254,\"_source\":{\"term\":\"the\",\"filename\":\"french_armed_forces.txt\"}},{\"_index\":\"search_terms\",\"_type\":\"_doc\",\"_id\":\"4df907e9-9559-4118-ac6b-0a3b5a5e4e02\",\"_score\":2.441254,\"_source\":{\"term\":\"the\",\"filename\":\"french_armed_forces.txt\"}},{\"_index\":\"search_terms\",\"_type\":\"_doc\",\"_id\":\"ac866366-964f-414e-8fab-7b514901434e\",\"_score\":2.441254,\"_source\":{\"term\":\"the\",\"filename\":\"french_armed_forces.txt\"}},{\"_index\":\"search_terms\",\"_type\":\"_doc\",\"_id\":\"bc2bff4c-9199-4ff5-9da8-a34252cc4e47\",\"_score\":2.441254,\"_source\":{\"term\":\"the\",\"filename\":\"french_armed_forces.txt\"}},{\"_index\":\"search_terms\",\"_type\":\"_doc\",\"_id\":\"46ae3b82-3ca2-4bc5-bff0-00f2c32522ce\",\"_score\":2.441254,\"_source\":{\"term\":\"the\",\"filename\":\"french_armed_forces.txt\"}},{\"_index\":\"search_terms\",\"_type\":\"_doc\",\"_id\":\"9ed33a7b-7d55-45d0-9b65-e755f4922d9e\",\"_score\":2.441254,\"_source\":{\"term\":\"the\",\"filename\":\"french_armed_forces.txt\"}}]},\"aggregations\":{\"group_by_term\":{\"doc_count_error_upper_bound\":0,\"sum_other_doc_count\":0,\"buckets\":[{\"key\":\"french_armed_forces.txt\",\"doc_count\":64},{\"key\":\"hitchhikers.txt\",\"doc_count\":29},{\"key\":\"warp_drive.txt\",\"doc_count\":6}]}}}";
         ObjectMapper objectMapper = new ObjectMapper();
         Aggregations aggregations = new Aggregations();
@@ -174,6 +174,6 @@ public class SearchServiceImpl implements SearchService {
         Wrapper testWrapper = new Wrapper();
         testWrapper = objectMapper.readValue(str, Wrapper.class);
         System.out.println(testWrapper);
-    }
+    }*/
 
 }
